@@ -251,3 +251,29 @@ svg {
     width: 30px;
     height: 30px;
   }
+
+  .scoreboard.addForm {
+    max-width: 65%;
+  }
+
+  .scoreboard.addForm:focus {
+    background-color: #fff;
+    color: #333;
+  }
+
+  .scoreboard.addPlayer-btn {
+    max-width: 25%;
+     flex-grow: 1;
+  border-width: 0 0 1px 0;
+  margin: 15px 10px 15px 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #5B45B9;
+  border-style: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  color: #C7BCF8;
+  letter-spacing: 2px;
+  outline: none;
+  cursor: pointer;
+  }

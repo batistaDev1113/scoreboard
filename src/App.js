@@ -2,16 +2,13 @@ import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Player from './components/Player';
+import AddForm from './components/AddForm';
 
 function App() {
 	const [
 		players,
 		setPlayers
-	] = useState([
-		'Yunior',
-		'Oscar',
-		'Joe'
-	]);
+	] = useState([]);
 
 	const handleRemovePlayer = (name) => {
 		setPlayers((prevState) => {
@@ -19,10 +16,23 @@ function App() {
 		});
 	};
 
+	const addPlayer = (playerToBe) => {
+		console.log(players);
+		setPlayers([
+			...players,
+			playerToBe
+		]);
+	};
+
 	return (
 		<div className='scoreboard'>
 			<Header title='Scoreboard' totalPlayers={players.length} />
-			{players.map((player) => <Player key={player} name={player} removePlayer={handleRemovePlayer} />)}
+			{players.length >= 1 ? (
+				players.map((player) => <Player key={player} name={player} removePlayer={handleRemovePlayer} />)
+			) : (
+				<p>Sorry, no players have been added 🙇🏻‍♂️!</p>
+			)}
+			<AddForm currentPlayers={players} onAdd={addPlayer} />
 		</div>
 	);
 }
