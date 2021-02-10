@@ -12,15 +12,19 @@ export default function AddForm({ currentPlayers, onAdd }) {
 			alert('Please enter a player name....');
 			return;
 		}
-		onAdd(player);
-		console.log(currentPlayers);
+		onAdd(player); // send data back to main app
+		setPlayer(''); // clear input
+	};
+
+	const updatePlayer = (e) => {
+		setPlayer(e.target.value);
 	};
 
 	return (
 		<div className='add-form'>
 			<form onSubmit={submitForm}>
 				<input
-					onChange={(e) => setPlayer(e.target.value)}
+					onChange={updatePlayer}
 					className='scoreboard addForm'
 					type='text'
 					placeholder='Player&#39;s Name'

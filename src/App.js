@@ -30,11 +30,17 @@ function App() {
 			{players.length >= 1 ? (
 				players.map((player) => <Player key={player} name={player} removePlayer={handleRemovePlayer} />)
 			) : (
-				<p>Sorry, no players have been added 🙇🏻‍♂️!</p>
+				<p style={style}>Sorry, no players have been added 🙇🏻‍♂️!</p>
 			)}
 			<AddForm currentPlayers={players} onAdd={addPlayer} />
 		</div>
 	);
 }
+
+const style = {
+	display: 'flex',
+	justifyContent: 'center',
+	fontWeight: 'bold'
+};
 
 export default App;
