@@ -9,7 +9,6 @@ export default function AddForm({ currentPlayers, onAdd }) {
 	const submitForm = (e) => {
 		e.preventDefault();
 		if (!player) {
-			
 		 	return;
 		 }
 		onAdd(player); // send data back to main app

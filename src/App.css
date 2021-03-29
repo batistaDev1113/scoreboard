@@ -277,3 +277,23 @@ svg {
   outline: none;
   cursor: pointer;
   }
+
+
+  /* media queries for mobile */
+@media only screen and (max-width: 568px) {
+  .scoreboard {
+    max-width: 90%;
+    overflow-x: hidden;
+  }
+
+  header h1 {
+    font-size: 1rem;
+  }
+
+  span.player-name {
+    line-height: 1;
+  }
+
+
+}
+  
