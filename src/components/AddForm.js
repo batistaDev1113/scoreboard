@@ -9,9 +9,9 @@ export default function AddForm({ currentPlayers, onAdd }) {
 	const submitForm = (e) => {
 		e.preventDefault();
 		if (!player) {
-			alert('Please enter a player name....');
-			return;
-		}
+			
+		 	return;
+		 }
 		onAdd(player); // send data back to main app
 		setPlayer(''); // clear input
 	};

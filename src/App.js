@@ -17,7 +17,6 @@ function App() {
 	};
 
 	const addPlayer = (playerToBe) => {
-		console.log(players);
 		setPlayers([
 			...players,
 			playerToBe
