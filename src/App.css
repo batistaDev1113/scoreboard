@@ -306,4 +306,7 @@ input[type="submit"]:hover {
   span.counter-score {
     padding: 0 10px;
   }
+  #error {
+    font-size: 0.8rem;
+  }
 }
